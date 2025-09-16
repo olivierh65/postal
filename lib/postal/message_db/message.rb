@@ -446,7 +446,8 @@ module Postal
           subject: subject,
           timestamp: timestamp.to_f,
           spam_status: spam_status,
-          tag: tag
+          tag: tag,
+          x_civimail_bounce: headers["x-civimail-bounce"]&.last
         }
       end
 
